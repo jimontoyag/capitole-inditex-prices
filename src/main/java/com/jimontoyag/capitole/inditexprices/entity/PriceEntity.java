@@ -1,24 +1,31 @@
 package com.jimontoyag.capitole.inditexprices.entity;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 import java.time.Instant;
 
+@Entity
+@Table(name = "prices")
 public class PriceEntity {
 
     @Id
     @GeneratedValue
     private Long id;
 
+    @Column( name = "brand_id")
     private Long brandId;
+    @Column( name = "product_id")
     private Long productId;
 
+    @Column( name = "start_date")
     private Instant startDate;
+    @Column( name = "end_date")
     private Instant endDate;
 
     private BigDecimal price;
+
+    private Integer priority;
 
     private String currency;
 
@@ -76,5 +83,13 @@ public class PriceEntity {
 
     public void setCurrency(String currency) {
         this.currency = currency;
+    }
+
+    public Integer getPriority() {
+        return priority;
+    }
+
+    public void setPriority(Integer priority) {
+        this.priority = priority;
     }
 }
