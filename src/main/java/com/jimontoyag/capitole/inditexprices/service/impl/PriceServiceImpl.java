@@ -22,6 +22,7 @@ public class PriceServiceImpl implements PriceService {
 
     @Override
     public Optional<Price> finalPrice(Instant date, long productId, long brandId) {
-        return Optional.empty();
+        return priceRepository.findFinalPrice(productId, brandId, date)
+                .map(mapper::entityToModel);
     }
 }

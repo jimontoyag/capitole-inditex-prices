@@ -55,7 +55,7 @@ class PriceServiceTest {
         entity.setCurrency("EUR");
         when(priceRepository.findFinalPrice(2L, 2L, date)).thenReturn(Optional.of(entity));
 
-        var result = priceService.finalPrice(date, 1L, 1L);
+        var result = priceService.finalPrice(date, 2L, 2L);
 
         assertFalse(result.isEmpty());
 
