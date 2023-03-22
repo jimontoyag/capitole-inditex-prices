@@ -1,11 +1,10 @@
 package com.jimontoyag.capitole.inditexprices.service;
 
-import com.jimontoyag.capitole.inditexprices.entity.PriceEntity;
 import com.jimontoyag.capitole.inditexprices.repository.PriceRepository;
+import com.jimontoyag.capitole.inditexprices.service.impl.PriceServiceImpl;
 import com.jimontoyag.capitole.inditexprices.service.mapper.PriceEntityMapper;
 
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.mapstruct.factory.Mappers;
