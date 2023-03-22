@@ -12,17 +12,17 @@ import java.util.Optional;
 @Service
 public class PriceServiceImpl implements PriceService {
 
-    private final PriceRepository priceRepository;
+  private final PriceRepository priceRepository;
 
-    private final PriceEntityMapper mapper;
-    public PriceServiceImpl(PriceRepository priceRepository, PriceEntityMapper mapper) {
-        this.priceRepository = priceRepository;
-        this.mapper = mapper;
-    }
+  private final PriceEntityMapper mapper;
 
-    @Override
-    public Optional<Price> finalPrice(Instant date, long productId, long brandId) {
-        return priceRepository.findFinalPrice(productId, brandId, date)
-                .map(mapper::entityToModel);
-    }
+  public PriceServiceImpl(PriceRepository priceRepository, PriceEntityMapper mapper) {
+    this.priceRepository = priceRepository;
+    this.mapper = mapper;
+  }
+
+  @Override
+  public Optional<Price> finalPrice(Instant date, long productId, long brandId) {
+    return priceRepository.findFinalPrice(productId, brandId, date).map(mapper::entityToModel);
+  }
 }

@@ -8,6 +8,6 @@ import org.mapstruct.Mapping;
 @Mapper
 public interface PriceControllerMapper {
 
-    @Mapping(source = "id", target = "priceId")
-    FinalPriceDTO priceModelToDTO(Price price);
+  @Mapping(source = "id", target = "priceId")
+  FinalPriceDTO priceModelToDTO(Price price);
 }

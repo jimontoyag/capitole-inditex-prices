@@ -7,5 +7,5 @@ import java.util.Optional;
 
 public interface PriceService {
 
-    Optional<Price> finalPrice(Instant date, long productId, long brandId);
+  Optional<Price> finalPrice(Instant date, long productId, long brandId);
 }

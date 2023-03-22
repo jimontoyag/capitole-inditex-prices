@@ -9,87 +9,87 @@ import java.time.Instant;
 @Table(name = "prices")
 public class PriceEntity {
 
-    @Id
-    @GeneratedValue
-    private Long id;
+  @Id @GeneratedValue private Long id;
 
-    @Column( name = "brand_id")
-    private Long brandId;
-    @Column( name = "product_id")
-    private Long productId;
+  @Column(name = "brand_id")
+  private Long brandId;
 
-    @Column( name = "start_date")
-    private Instant startDate;
-    @Column( name = "end_date")
-    private Instant endDate;
+  @Column(name = "product_id")
+  private Long productId;
 
-    private BigDecimal price;
+  @Column(name = "start_date")
+  private Instant startDate;
 
-    private Integer priority;
+  @Column(name = "end_date")
+  private Instant endDate;
 
-    private String currency;
+  private BigDecimal price;
 
-    public Long getId() {
-        return id;
-    }
+  private Integer priority;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  private String currency;
 
-    public Long getBrandId() {
-        return brandId;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public void setBrandId(Long brandId) {
-        this.brandId = brandId;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public Long getProductId() {
-        return productId;
-    }
+  public Long getBrandId() {
+    return brandId;
+  }
 
-    public void setProductId(Long productId) {
-        this.productId = productId;
-    }
+  public void setBrandId(Long brandId) {
+    this.brandId = brandId;
+  }
 
-    public Instant getStartDate() {
-        return startDate;
-    }
+  public Long getProductId() {
+    return productId;
+  }
 
-    public void setStartDate(Instant startDate) {
-        this.startDate = startDate;
-    }
+  public void setProductId(Long productId) {
+    this.productId = productId;
+  }
 
-    public Instant getEndDate() {
-        return endDate;
-    }
+  public Instant getStartDate() {
+    return startDate;
+  }
 
-    public void setEndDate(Instant endDate) {
-        this.endDate = endDate;
-    }
+  public void setStartDate(Instant startDate) {
+    this.startDate = startDate;
+  }
 
-    public BigDecimal getPrice() {
-        return price;
-    }
+  public Instant getEndDate() {
+    return endDate;
+  }
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
+  public void setEndDate(Instant endDate) {
+    this.endDate = endDate;
+  }
 
-    public String getCurrency() {
-        return currency;
-    }
+  public BigDecimal getPrice() {
+    return price;
+  }
 
-    public void setCurrency(String currency) {
-        this.currency = currency;
-    }
+  public void setPrice(BigDecimal price) {
+    this.price = price;
+  }
 
-    public Integer getPriority() {
-        return priority;
-    }
+  public String getCurrency() {
+    return currency;
+  }
 
-    public void setPriority(Integer priority) {
-        this.priority = priority;
-    }
+  public void setCurrency(String currency) {
+    this.currency = currency;
+  }
+
+  public Integer getPriority() {
+    return priority;
+  }
+
+  public void setPriority(Integer priority) {
+    this.priority = priority;
+  }
 }

@@ -8,7 +8,7 @@ import org.mapstruct.Mapping;
 @Mapper
 public interface PriceEntityMapper {
 
-    @Mapping(source = "startDate", target = "fromDate")
-    @Mapping(source = "endDate", target = "toDate")
-    Price entityToModel(PriceEntity entity);
+  @Mapping(source = "startDate", target = "fromDate")
+  @Mapping(source = "endDate", target = "toDate")
+  Price entityToModel(PriceEntity entity);
 }
